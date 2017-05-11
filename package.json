@@ -1,0 +1,13 @@
+{
+  "name": "myApp",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "express": "~4.2.0",
+    "method-override": "~2.0.2",
+    "moment": "^2.13.0",
+    "mongoose": "~3.8.11",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.3.0"
+  }
+}

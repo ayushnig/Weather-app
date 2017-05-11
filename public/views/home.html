@@ -1,0 +1,30 @@
+<div class="jumbotron text-center">
+	<h1>Weather Forecast</h1>
+	<div class="row">
+	<form class="navbar-form navbar-left" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" ng-model="assetName" ng-change="searchWeather()" placeholder="Enter city name..">
+								</div>
+								<button type="submit" class="btn btn-info" ng-click="searchWeather()">Search</button>
+							</form>
+		<div class="col-sm-6 col-md-4" ng-repeat="item in items" ng-cloak>
+			<div class="thumbnail">
+				<div class="media">
+					<div class="media-left">
+						<a href="#">
+							<img class="media-object">
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">{{name.name}},{{name.country}}</h4>
+						<h4><span class="label label-primary">{{item.main.temp}}°С</span></h4>
+						<span>{{item.weather[0].main}}, {{item.weather[0].description}}</span><br>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ng-map center={{coord.lat}},{{coord.lon}} zoom="4">
+    <marker position={{coord.lat}},{{coord.lon}} title="Hello World!"></marker>
+  </ng-map>
+	</div>
+</div>
